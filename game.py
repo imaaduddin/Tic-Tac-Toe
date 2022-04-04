@@ -1,5 +1,6 @@
 from pickle import TRUE
 from main import HumanPlayer, RandomComputerPlayer
+import time
 
 
 class TicTacToe:
@@ -99,8 +100,11 @@ def play(game, x_player, o_player, print_game=True):
             # after we make our move, we need to alternate letters
             letter = 'O' if letter == 'X' else 'X' # switches player 
         
-        if print_game:
-            print("It's a tie!")
+        # tiny break to make things a bit easier to read
+        time.sleep(0.8)
+        
+    if print_game:
+        print("It's a tie!")
     
 
 if __name__ == '__main__':
